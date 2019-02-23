@@ -4,24 +4,24 @@ import "./App.css";
 class App extends Component {
   constructor() {
     super();
+    // Declare empty arrays for data from each url
     this.state = {
-      people: []
+      listPeople: [],
+      listPlanets: [],
+      listFilms: []
     };
   }
 
   //Fetches the data from the star wars api
-  async componentDidMount(data) {
+  async componentDidMount() {
     try {
-      /* const [people, planets, starships] = await Promise.all(
-        urls.map(async url => {
-          // Fetch each url and assign it to a variable
-          const resp = await fetch(url);
-          // return the response with json method.
-          //return resp.json();
-          const json = resp.json();
-          // Set State
-          this.setState({ data: json })
-        })); */
+
+      // COMMENT CODE
+      const urls = [
+        "https://swapi.co/api/people/",
+        "https://swapi.co/api/planets/",
+        "https://swapi.co/api/films/"
+      ];
 
       //Set state out here
       /*this.setState({
@@ -30,13 +30,29 @@ class App extends Component {
         starships: json
       });*/
 
-      //TODO: Add two other urls such as planets & starships
-      //TODO: set the state of both of them and get some output
+      //TODO: Add two other urls such as planets & starships -DOne
+      //TODO: set the state of both of them and get some output -DONe
       //TODO: create categories on the webpage with the information from each of them in.
+      const [people, planets, films] = await Promise.all(
+        urls.map(async url => {
+          // Fetch each url and assign it to a variable
+          const resp = await fetch(url);
+          // return the response with json method.
+          return resp.json();
+        })
+      );
 
-      const resp = await fetch("https://swapi.co/api/people/");
+      this.setState({
+        listPeople: people.results,
+        listPlanets: planets.results,
+        listFilms: films.results
+      });
+
+      /*const resp = await fetch("https://swapi.co/api/people/");
       const json = await resp.json();
-      this.setState({ people: json.results });
+      this.setState({ 
+        people: json.results
+      });*/
     } catch (error) {
       console.log("Oops there was an error!", error);
     }
@@ -45,8 +61,14 @@ class App extends Component {
   render() {
     return (
       <div>
-        {this.state.people.map(results => (
+        {this.state.listPeople.map(results => (
           <h3 key={results.height}>Name: {results.name}</h3>
+        ))}
+        {this.state.listPlanets.map(results => (
+          <h3 key={results.diameter}>Name: {results.name}</h3>
+        ))}
+        {this.state.listFilms.map(results => (
+          <h3 key={results.episode_id}>Name: {results.title}</h3>
         ))}
       </div>
     );
