@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+//import CardList from "./components/CardList";
+import Header from "./components/Header";
 import "./App.css";
 
 class App extends Component {
@@ -6,68 +8,63 @@ class App extends Component {
     super();
     // Declare empty arrays for data from each url
     this.state = {
-      listPeople: [],
-      listPlanets: [],
-      listFilms: []
+      people: [],
+      planets: [],
+      films: []
     };
   }
 
-  //Fetches the data from the star wars api
+  // Fetches data from the Star Wars API
   async componentDidMount() {
     try {
-
-      // COMMENT CODE
+      // Declare links to Star Wars API
       const urls = [
         "https://swapi.co/api/people/",
         "https://swapi.co/api/planets/",
         "https://swapi.co/api/films/"
       ];
 
-      //Set state out here
-      /*this.setState({
-        people: json,
-        planets: json,
-        starships: json
-      });*/
-
-      //TODO: Add two other urls such as planets & starships -DOne
-      //TODO: set the state of both of them and get some output -DONe
-      //TODO: create categories on the webpage with the information from each of them in.
+      // Fetched the data accordingly into each category using async awaits syntax
       const [people, planets, films] = await Promise.all(
         urls.map(async url => {
-          // Fetch each url and assign it to a variable
+          // Fetch each url and assign it
           const resp = await fetch(url);
           // return the response with json method.
           return resp.json();
         })
       );
 
+      //Declare State for each category then access the results rection in the api json.
       this.setState({
-        listPeople: people.results,
-        listPlanets: planets.results,
-        listFilms: films.results
+        people: people.results,
+        planets: planets.results,
+        films: films.results
       });
-
-      /*const resp = await fetch("https://swapi.co/api/people/");
-      const json = await resp.json();
-      this.setState({ 
-        people: json.results
-      });*/
     } catch (error) {
+      // Catches errors within componentDidMount
       console.log("Oops there was an error!", error);
     }
   }
 
+  // TODO(1): Fix state and get the data to pass down through to the cardList Component
+  // TODO(2): Work out a way to have mutiple lists using only one list component
+  // TODO(3): Link other categories to list
+  // TODO(4): Add Headings for each category
+  // TODO(5): Add Scroll component to lists
+  // TODO(6): Search filter input component(smart component)...
+  // ADD BELOW: <CardList people />
   render() {
+    const { people, planets, films } = this.state;
     return (
       <div>
-        {this.state.listPeople.map(results => (
+        <Header />
+        {people.map((results) => (
           <h3 key={results.height}>Name: {results.name}</h3>
         ))}
-        {this.state.listPlanets.map(results => (
+        {planets.map(results => (
           <h3 key={results.diameter}>Name: {results.name}</h3>
         ))}
-        {this.state.listFilms.map(results => (
+        {films.map(results => (
           <h3 key={results.episode_id}>Name: {results.title}</h3>
         ))}
       </div>
