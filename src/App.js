@@ -2,38 +2,6 @@ import Header from "./components/Header";
 import "./App.css";
 
 
-  // Fetches data from the Star Wars API
-  async componentDidMount() {
-    try {
-      // Declare links to Star Wars API
-      const urls = [
-        "https://swapi.co/api/people/",
-        "https://swapi.co/api/planets/",
-        "https://swapi.co/api/films/"
-      ];
-
-      // Fetched the data accordingly into each category using async awaits syntax
-      const [people, planets, films] = await Promise.all(
-        urls.map(async url => {
-          // Fetch each url and assign it
-          const resp = await fetch(url);
-          // return the response with json method.
-          return resp.json();
-        })
-      );
-
-      // Declare State for each category then access the results rection in the api json.
-      this.setState({
-        people: people.results,
-        planets: planets.results,
-        films: films.results
-      });
-    } catch (error) {
-      // Catches errors within componentDidMount
-      console.log("Oops there was an error!", error);
-    }
-  }
-
   // TODO(1): Fix state and get the data to pass down through to the cardList Component
   // TODO(2): Work out a way to have mutiple lists using only one list component
   // TODO(3): Link other categories to list
