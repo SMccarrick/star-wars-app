@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-//import CardList from "./components/CardList";
+// Import CardList from "./components/CardList";
 import Header from "./components/Header";
 import "./App.css";
 
@@ -34,7 +34,7 @@ class App extends Component {
         })
       );
 
-      //Declare State for each category then access the results rection in the api json.
+      // Declare State for each category then access the results rection in the api json.
       this.setState({
         people: people.results,
         planets: planets.results,
@@ -58,7 +58,7 @@ class App extends Component {
     return (
       <div>
         <Header />
-        {people.map((results) => (
+        {people.map(results => (
           <h3 key={results.height}>Name: {results.name}</h3>
         ))}
         {planets.map(results => (
