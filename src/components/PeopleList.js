@@ -22,5 +22,16 @@ class PeopleList extends Component {
     }
   }
 
+  render() {
+    const { people } = this.state;
+    return (
+      <div>
+        {people.map(person => (
+          <Card key={person.height} name={person.name} />
+        ))}
+      </div>
+    );
+  }
+}
 
 export default PeopleList;
