@@ -58,7 +58,7 @@ class App extends Component {
     return (
       <div>
         <Header />
-        {people.map((results) => (
+        {people.map(results => (
           <h3 key={results.height}>Name: {results.name}</h3>
         ))}
         {planets.map(results => (
