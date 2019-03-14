@@ -8,5 +8,19 @@ class PlanetList extends Component {
     planets: []
   };
 
+  // Fetch data from the API
+  async componentDidMount() {
+    try {
+      const res = await fetch("https://swapi.co/api/planets/");
+      const planets = await res.json();
+
+      this.setState({
+        planets: planets.results
+      });
+    } catch (e) {
+      console.log("error", e);
+    }
+  }
+
 
 export default PlanetList;
