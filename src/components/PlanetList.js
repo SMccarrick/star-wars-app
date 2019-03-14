@@ -22,5 +22,16 @@ class PlanetList extends Component {
     }
   }
 
+  render() {
+    const { planets } = this.state;
+    return (
+      <div>
+        {planets.map(planet => (
+          <Card key={planet.diameter} name={planet.name} />
+        ))}
+      </div>
+    );
+  }
+}
 
 export default PlanetList;
