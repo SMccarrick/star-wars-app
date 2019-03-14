@@ -1,6 +1,16 @@
 import Header from "./components/Header";
 import "./App.css";
 
+const App = () => {
+  return (
+    <div>
+      <Header />
+      <PeopleList />
+      <PlanetList />
+      <FilmList />
+    </div>
+  );
+};
 
 // TODO(1): Fix state and get the data to pass down through to the cardList Component
 // TODO(2): Work out a way to have mutiple lists using only one list component
