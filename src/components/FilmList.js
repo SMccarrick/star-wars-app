@@ -22,5 +22,16 @@ class FilmList extends Component {
     }
   }
 
+  render() {
+    const { films } = this.state;
+    return (
+      <div>
+        {films.map(film => (
+          <Card key={film.episode_id} name={film.title} />
+        ))}
+      </div>
+    );
+  }
+}
 
 export default FilmList;
