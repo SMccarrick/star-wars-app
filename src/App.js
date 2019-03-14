@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// Import CardList from "./components/CardList";
 import Header from "./components/Header";
 import "./App.css";
 
