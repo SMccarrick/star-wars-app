@@ -34,7 +34,7 @@ class App extends Component {
         })
       );
 
-      //Declare State for each category then access the results rection in the api json.
+      // Declare State for each category then access the results rection in the api json.
       this.setState({
         people: people.results,
         planets: planets.results,
