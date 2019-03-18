@@ -2,18 +2,27 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-const Film = ({ title }) => {
+const Film = ({ film }) => {
   return (
     <CardStyles>
-      <SecondHeading>{title}</SecondHeading>
+      <SecondHeading>{film.title}</SecondHeading>
     </CardStyles>
   );
 };
 
 export default Film;
 
+/*
+  PropTypes
+
+  - Set property type of film to be an object
+  - Set property type of title to be a string
+
+*/
 Film.propTypes = {
-  title: PropTypes.string.isRequired
+  film: PropTypes.shape({
+    title: PropTypes.string.isRequired
+  }).isRequired
 };
 
 const CardStyles = styled.div`
