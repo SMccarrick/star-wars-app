@@ -28,7 +28,7 @@ class FilmList extends Component {
     return (
       <FilmGrid>
         {films.map(film => (
-          <Film key={film.episode_id} title={film.title} />
+          <Film key={film.episode_id} film={film} />
         ))}
       </FilmGrid>
     );
