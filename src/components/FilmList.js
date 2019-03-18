@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import Card from "./Card";
+import styled from "styled-components";
+import Film from "./Film";
 
 class FilmList extends Component {
   // Set default state of movies to a blank array
@@ -25,13 +26,20 @@ class FilmList extends Component {
   render() {
     const { films } = this.state;
     return (
-      <div>
+      <FilmGrid>
         {films.map(film => (
-          <Card key={film.episode_id} name={film.title} />
+          <Film key={film.episode_id} title={film.title} />
         ))}
-      </div>
+      </FilmGrid>
     );
   }
 }
 
 export default FilmList;
+
+const FilmGrid = styled.div`
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 1rem;
+`;
