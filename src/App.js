@@ -1,6 +1,4 @@
 import React from "react";
-import PeopleList from "./components/PeopleList";
-import PlanetList from "./components/PlanetList";
 import FilmList from "./components/FilmList";
 import Header from "./components/Header";
 import "./App.css";
@@ -9,8 +7,6 @@ const App = () => {
   return (
     <div>
       <Header />
-      <PeopleList />
-      <PlanetList />
       <FilmList />
     </div>
   );
