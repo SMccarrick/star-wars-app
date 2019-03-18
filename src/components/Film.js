@@ -24,3 +24,6 @@ const CardStyles = styled.div`
   border-radius: 25px;
 `;
 
+const SecondHeading = styled.h2`
+  font-size: 2rem;
+`;
