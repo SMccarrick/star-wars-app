@@ -11,10 +11,15 @@ import "./App.css";
 
 const App = () => {
   return (
-    <div>
-      <Header />
-      <FilmList />
-    </div>
+    <Router>
+      <div>
+        <Header />
+      </div>
+      <Switch>
+        <Route exact path="/" component={FilmList} />
+        <Route path="/:id" component={FilmDetail} />
+      </Switch>
+    </Router>
   );
 };
 
