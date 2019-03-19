@@ -19,3 +19,18 @@ class FilmDetail extends Component {
       console.log("error", e);
     }
   }
+
+  render() {
+    const { film } = this.state;
+    return (
+      <div>
+        <h1>{film.title}</h1>
+        <h1>{film.release_date}</h1>
+        <h1>{film.director}</h1>
+        <h1>{film.episode_id}</h1>
+      </div>
+    );
+  }
+}
+
+export default FilmDetail;
