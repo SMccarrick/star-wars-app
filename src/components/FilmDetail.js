@@ -1,3 +1,10 @@
+import React, { Component } from "react";
+
+class FilmDetail extends Component {
+  state = {
+    film: []
+  };
+
   // Fetch data from the API
   async componentDidMount() {
     const { match } = this.props;
