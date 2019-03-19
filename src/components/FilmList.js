@@ -3,11 +3,15 @@ import styled from "styled-components";
 import Film from "./Film";
 
 class FilmList extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      films: []
+    };
+    this.sortListAscending = this.sortListAscending.bind(this);
+  }
   // Set default state of movies to a blank array
   // If the data doesnt come in its just a blank array
-  state = {
-    films: []
-  };
 
   // Fetch data from the API
   async componentDidMount() {
