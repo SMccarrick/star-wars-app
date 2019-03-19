@@ -1,4 +1,9 @@
 import React from "react";
+import {
+  BrowserRouter as Router, // Browser Router assigned alias
+  Route,
+  Switch
+} from "react-router-dom";
 import FilmList from "./components/FilmList";
 import Header from "./components/Header";
 import "./App.css";
