@@ -38,11 +38,16 @@ class FilmList extends Component {
   render() {
     const { films } = this.state;
     return (
-      <FilmGrid>
-        {films.map(film => (
-          <Film key={film.episode_id} film={film} />
-        ))}
-      </FilmGrid>
+      <div>
+        <button type="button" onClick={this.sortListAscending}>
+          asc
+        </button>
+        <FilmGrid>
+          {films.map(film => (
+            <Film key={film.episode_id} film={film} />
+          ))}
+        </FilmGrid>
+      </div>
     );
   }
 }
