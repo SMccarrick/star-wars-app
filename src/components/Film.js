@@ -5,9 +5,11 @@ import styled from "styled-components";
 
 const Film = ({ film }) => {
   return (
-    <CardStyles>
-      <SecondHeading>{film.title}</SecondHeading>
-    </CardStyles>
+    <Link to={`/${film.episode_id}`}>
+      <CardStyles>
+        <SecondHeading>{film.title}</SecondHeading>
+      </CardStyles>
+    </Link>
   );
 };
 
