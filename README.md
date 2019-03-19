@@ -7,3 +7,7 @@ In this app I will be creating a React App using an api.
 ## API Link
 
 https://swapi.co/
+
+## Dev run
+
+Use npm start to run app.
