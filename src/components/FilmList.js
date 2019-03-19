@@ -27,6 +27,14 @@ class FilmList extends Component {
     }
   }
 
+  sortListAscending() {
+    const { films } = this.state;
+    films.sort((a, b) => a.episode_id - b.episode_id);
+    this.setState({
+      films
+    });
+  }
+
   render() {
     const { films } = this.state;
     return (
