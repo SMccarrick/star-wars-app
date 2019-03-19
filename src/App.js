@@ -22,7 +22,7 @@ const App = () => {
     </Router>
   );
 };
-
+// <Route path="/:id" component={MovieDetail} />
 // TODO(1): Fix state and get the data to pass down through to the cardList Component
 // TODO(2): Work out a way to have mutiple lists using only one list component
 // TODO(3): Link other categories to list
