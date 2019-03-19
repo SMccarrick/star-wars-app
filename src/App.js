@@ -5,6 +5,7 @@ import {
   Switch
 } from "react-router-dom";
 import FilmList from "./components/FilmList";
+import FilmDetail from "./components/FilmDetail";
 import Header from "./components/Header";
 import "./App.css";
 
