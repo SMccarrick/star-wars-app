@@ -8,7 +8,7 @@ class FilmList extends Component {
     this.state = {
       films: []
     };
-    this.sortListAscending = this.sortListAscending.bind(this);
+    this.addFilmIds = this.addFilmIds.bind(this);
   }
 
   // Fetch data from the API
