@@ -44,6 +44,11 @@ class FilmList extends Component {
     newFilms.sort(
       (a, b) => new Date(a.release_date) - new Date(b.release_date)
     );
+    // Loop through array & add ids incrementing by 1 for each film.
+    newFilms.map((film, i) => {
+      film.id = i + 1;
+      return film;
+    });
     this.setState({
       films
     });
