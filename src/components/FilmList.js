@@ -10,8 +10,6 @@ class FilmList extends Component {
     };
     this.sortListAscending = this.sortListAscending.bind(this);
   }
-  // Set default state of movies to a blank array
-  // If the data doesnt come in its just a blank array
 
   // Fetch data from the API
   async componentDidMount() {
