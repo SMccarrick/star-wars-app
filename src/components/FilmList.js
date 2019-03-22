@@ -40,6 +40,10 @@ class FilmList extends Component {
     const { films } = this.state;
     // Create copy of array using Spread Operator
     const newFilms = [...films];
+    // Sort data by release_date.
+    newFilms.sort(
+      (a, b) => new Date(a.release_date) - new Date(b.release_date)
+    );
     this.setState({
       films
     });
