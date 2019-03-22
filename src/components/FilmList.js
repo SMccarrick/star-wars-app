@@ -25,7 +25,6 @@ class FilmList extends Component {
     }
   }
 
-  sortListAscending() {
   // Used this function to put the episodes in order to test if I could fix the links.
   addFilmIds() {
     /*
