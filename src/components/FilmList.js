@@ -38,7 +38,8 @@ class FilmList extends Component {
       4. Refresh the state.
      */
     const { films } = this.state;
-    films.sort((a, b) => a.episode_id - b.episode_id);
+    // Create copy of array using Spread Operator
+    const newFilms = [...films];
     this.setState({
       films
     });
