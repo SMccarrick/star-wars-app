@@ -51,7 +51,7 @@ class FilmList extends Component {
     // To see if the IDs have been added
     console.log(newFilms);
     this.setState({
-      films
+      films: newFilms
     });
   }
 
