@@ -26,6 +26,17 @@ class FilmList extends Component {
   }
 
   sortListAscending() {
+  // Used this function to put the episodes in order to test if I could fix the links.
+  addFilmIds() {
+    /*
+      TODO:
+      1. Create a copy of array[x]
+      2. Sort array by release Date[done]
+      3. Assign IDs to each object that match url parameters
+          - Params are 1,2,3,4,5,6,7
+          - My Film IDs must match the above order for each film object
+      4. Refresh the state.
+     */
     const { films } = this.state;
     films.sort((a, b) => a.episode_id - b.episode_id);
     this.setState({
