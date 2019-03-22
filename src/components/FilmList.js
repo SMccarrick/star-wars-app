@@ -8,10 +8,8 @@ class FilmList extends Component {
     this.state = {
       films: []
     };
-    this.sortListAscending = this.sortListAscending.bind(this);
+    this.addFilmIds = this.addFilmIds.bind(this);
   }
-  // Set default state of movies to a blank array
-  // If the data doesnt come in its just a blank array
 
   // Fetch data from the API
   async componentDidMount() {
@@ -27,11 +25,34 @@ class FilmList extends Component {
     }
   }
 
-  sortListAscending() {
+  // Used this function to put the episodes in order to test if I could fix the links.
+  addFilmIds() {
+    /*
+      TODO:
+      1. Create a copy of array[x]
+      2. Sort array by release Date[done]
+      3. Assign IDs to each object that match url parameters
+          - Params are 1,2,3,4,5,6,7
+          - My Film IDs must match the above order for each film object
+      4. Refresh the state.
+     */
     const { films } = this.state;
-    films.sort((a, b) => a.episode_id - b.episode_id);
+    // Create copy of array using Spread Operator
+    const newFilms = [...films];
+    // Sort data by release_date.
+    newFilms.sort(
+      (a, b) => new Date(a.release_date) - new Date(b.release_date)
+    );
+    // Loop through array & add ids incrementing by 1 for each film.
+    newFilms.map((film, i) => {
+      film.id = i + 1;
+      return film;
+    });
+    // To see if the IDs have been added
+    console.log(newFilms);
+    // Refresh the state
     this.setState({
-      films
+      films: newFilms
     });
   }
 
@@ -39,14 +60,18 @@ class FilmList extends Component {
     const { films } = this.state;
     return (
       <div>
-        <button type="button" onClick={this.sortListAscending}>
-          asc
-        </button>
-        <FilmGrid>
-          {films.map(film => (
-            <Film key={film.episode_id} film={film} />
-          ))}
-        </FilmGrid>
+        <div>
+          <button type="button" onClick={this.addFilmIds}>
+            Test
+          </button>
+        </div>
+        <div>
+          <FilmGrid>
+            {films.map(film => (
+              <Film key={film.id} film={film} />
+            ))}
+          </FilmGrid>
+        </div>
       </div>
     );
   }
