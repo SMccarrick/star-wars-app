@@ -24,17 +24,7 @@ class FilmList extends Component {
     }
   }
 
-  // Used this function to put the episodes in order to test if I could fix the links.
-  addFilmIds() {
-    /*
-      TODO:
-      1. Create a copy of array[x]
-      2. Sort array by release Date[done]
-      3. Assign IDs to each object that match url parameters
-          - Params are 1,2,3,4,5,6,7
-          - My Film IDs must match the above order for each film object
-      4. Refresh the state.
-     */
+  render() {
     const { films } = this.state;
     // Create copy of array using Spread Operator
     const newFilms = [...films];
@@ -42,14 +32,11 @@ class FilmList extends Component {
     newFilms.sort(
       (a, b) => new Date(a.release_date) - new Date(b.release_date)
     );
-    // Loop through array & add ids incrementing by 1 for each film.
+    // Loop through array & add IDss incrementing by 1 for each film.
     newFilms.map((film, i) => {
       film.id = i + 1;
       return film;
     });
-  render() {
-    const { films } = this.state;
-    return (
     // Creates a loader
     return !newFilms.length ? (
       <h1>Loading...</h1>
