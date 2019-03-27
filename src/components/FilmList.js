@@ -82,6 +82,6 @@ export default FilmList;
 const FilmGrid = styled.div`
   display: grid;
   padding: 1rem;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-row-gap: 1rem;
 `;
