@@ -22,15 +22,19 @@ class FilmDetail extends Component {
 
   render() {
     const { film } = this.state;
-    return (
+    const { title, release_date, director, episode_id } = film;
     return !film.title ? (
       <h1>Loading...</h1>
     ) : (
       <div>
-        <h1>{film.title}</h1>
-        <h1>{film.release_date}</h1>
-        <h1>{film.director}</h1>
-        <h1>{film.episode_id}</h1>
+        <div>
+          <h1>{title}</h1>
+        </div>
+        <div>
+          <h1>{release_date}</h1>
+          <h1>{director}</h1>
+          <h1>{episode_id}</h1>
+        </div>
       </div>
     );
   }
