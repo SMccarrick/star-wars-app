@@ -10,12 +10,14 @@ class FilmList extends Component {
     };
   }
 
-  // Fetch data from the API
+  // After the component loads fetch data from the API
   async componentDidMount() {
     try {
+      // Fetch data from link
       const res = await fetch("https://swapi.co/api/films/");
+      // Assign data
       const films = await res.json();
-
+      // Declare State
       this.setState({
         films: films.results
       });
