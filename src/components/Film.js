@@ -27,7 +27,9 @@ export default Film;
 */
 Film.propTypes = {
   film: PropTypes.shape({
-    title: PropTypes.string.isRequired
+    title: PropTypes.string.isRequired,
+    release_date: PropTypes.string.isRequired,
+    episode_id: PropTypes.number.isRequired
   }).isRequired
 };
 
