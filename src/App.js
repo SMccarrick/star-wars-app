@@ -9,6 +9,8 @@ import FilmList from "./components/FilmList";
 import FilmDetail from "./components/FilmDetail";
 import Header from "./components/Header";
 import "./App.css";
+import theme from "./theme";
+
 /*
 
   Below I've created a swtich with two routes
