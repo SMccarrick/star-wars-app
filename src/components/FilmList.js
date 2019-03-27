@@ -47,14 +47,6 @@ class FilmList extends Component {
       film.id = i + 1;
       return film;
     });
-    // To see if the IDs have been added
-    console.log(newFilms);
-    // Refresh the state
-    this.setState({
-      films: newFilms
-    });
-  }
-
   render() {
     const { films } = this.state;
     return (
