@@ -46,4 +46,7 @@ const CardStyles = styled.div`
 
 const SecondHeading = styled.h2`
   font-size: 2rem;
+  hr {
+    color: ${props => props.theme.secondary};
+  }
 `;
