@@ -5,11 +5,13 @@ import styled from "styled-components";
 
 const Film = ({ film }) => {
   return (
-    <Link to={`/${film.id}`}>
+    <StyledLink to={`/${id}`}>
       <CardStyles>
-        <SecondHeading>{film.title}</SecondHeading>
+        <h1>{title}</h1>
+        <hr />
+        <p>Episode {episode_id}</p>
       </CardStyles>
-    </Link>
+    </StyledLink>
   );
 };
 
@@ -42,11 +44,13 @@ const CardStyles = styled.div`
   padding: 1rem;
   background: #bdbdbd;
   border-radius: 25px;
-`;
-
-const SecondHeading = styled.h2`
-  font-size: 2rem;
   hr {
     color: ${props => props.theme.secondary};
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.3rem;
   }
 `;
