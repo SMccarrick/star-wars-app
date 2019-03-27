@@ -8,7 +8,6 @@ class FilmList extends Component {
     this.state = {
       films: []
     };
-    this.addFilmIds = this.addFilmIds.bind(this);
   }
 
   // Fetch data from the API
@@ -61,9 +60,6 @@ class FilmList extends Component {
     return (
       <div>
         <div>
-          <button type="button" onClick={this.addFilmIds}>
-            Test
-          </button>
         </div>
         <div>
           <FilmGrid>
