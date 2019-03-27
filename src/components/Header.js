@@ -4,16 +4,18 @@ import styled from "styled-components";
 
 const Header = () => {
   return (
-    <Link to="/">
-      <MainHeading>Star Wars</MainHeading>
-    </Link>
+    <HeaderWrapper>
+      <Link to="/">
+        <h1>Star Wars</h1>
+      </Link>
+      <h2>Choose a episode below!</h2>
+    </HeaderWrapper>
   );
 };
 
 export default Header;
 
-const MainHeading = styled.h1`
-  font-size: 2.5rem;
+const HeaderWrapper = styled.div`
   text-align: center;
   a {
     text-decoration: none;
@@ -21,5 +23,8 @@ const MainHeading = styled.h1`
     &:visited {
       color: ${props => props.theme.primary};
     }
+  }
+  h1 {
+    font-size: 2.5rem;
   }
 `;
