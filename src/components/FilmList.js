@@ -58,6 +58,10 @@ class FilmList extends Component {
   render() {
     const { films } = this.state;
     return (
+    // Creates a loader
+    return !newFilms.length ? (
+      <h1>Loading...</h1>
+    ) : (
       <div>
         <FilmGrid>
           {newFilms.map(film => (
