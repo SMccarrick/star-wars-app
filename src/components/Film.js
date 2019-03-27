@@ -28,6 +28,14 @@ Film.propTypes = {
   }).isRequired
 };
 
+const StyledLink = styled(Link)`
+  text-decoration: none;
+
+  &:visited {
+    color: ${props => props.theme.primary};
+  }
+`;
+
 const CardStyles = styled.div`
   text-align: center;
   margin: 1rem;
@@ -38,4 +46,7 @@ const CardStyles = styled.div`
 
 const SecondHeading = styled.h2`
   font-size: 2rem;
+  hr {
+    color: ${props => props.theme.secondary};
+  }
 `;

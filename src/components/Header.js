@@ -15,4 +15,11 @@ export default Header;
 const MainHeading = styled.h1`
   font-size: 2.5rem;
   text-align: center;
+  a {
+    text-decoration: none;
+
+    &:visited {
+      color: ${props => props.theme.primary};
+    }
+  }
 `;

@@ -31,6 +31,7 @@ module.exports = {
         extensions: [".js", ".jsx"]
       }
     ],
+    camelcase: [1, { properties: "never" }],
     "react/prop-types": 0,
     "no-underscore-dangle": 0,
     "import/imports-first": ["error", "absolute-first"],
