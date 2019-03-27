@@ -23,6 +23,9 @@ class FilmDetail extends Component {
   render() {
     const { film } = this.state;
     return (
+    return !film.title ? (
+      <h1>Loading...</h1>
+    ) : (
       <div>
         <h1>{film.title}</h1>
         <h1>{film.release_date}</h1>
