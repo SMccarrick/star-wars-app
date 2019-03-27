@@ -59,15 +59,11 @@ class FilmList extends Component {
     const { films } = this.state;
     return (
       <div>
-        <div>
-        </div>
-        <div>
-          <FilmGrid>
-            {films.map(film => (
-              <Film key={film.id} film={film} />
-            ))}
-          </FilmGrid>
-        </div>
+        <FilmGrid>
+          {newFilms.map(film => (
+            <Film key={film.id} film={film} />
+          ))}
+        </FilmGrid>
       </div>
     );
   }
