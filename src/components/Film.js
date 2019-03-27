@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Film = ({ film }) => {
+  const { id, title, episode_id } = film;
   return (
     <StyledLink to={`/${id}`}>
       <CardStyles>
