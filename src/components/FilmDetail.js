@@ -3,9 +3,12 @@ import FilmInfo from './FilmInfo';
 import FetchCharacter from './FetchCharacter';
 
 class FilmDetail extends Component {
-  state = {
-    film: []
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      film: [],
+    };
+  }
 
   // Fetch data from the API
   async componentDidMount() {
@@ -29,6 +32,7 @@ class FilmDetail extends Component {
       <h1>Loading...</h1>
     ) : (
       <div>
+        <FilmInfo film={film} />
         <div>
           <h1>{title}</h1>
         </div>
