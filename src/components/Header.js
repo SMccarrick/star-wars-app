@@ -1,14 +1,14 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 const Header = () => {
   return (
     <HeaderWrapper>
       <Link to="/">
         <h1>Star Wars</h1>
+        <Hr />
       </Link>
-      <h2>Choose a episode below!</h2>
     </HeaderWrapper>
   );
 };
@@ -16,7 +16,6 @@ const Header = () => {
 export default Header;
 
 const HeaderWrapper = styled.div`
-  text-align: center;
   a {
     text-decoration: none;
 
@@ -24,7 +23,18 @@ const HeaderWrapper = styled.div`
       color: ${props => props.theme.primary};
     }
   }
+  a:hover {
+    color: ${props => props.theme.secondary};
+    transition: 0.8s;
+  }
   h1 {
+    text-align: center;
+    font-weight: 400;
     font-size: 2.5rem;
   }
+`;
+
+const Hr = styled.hr`
+  color: ${props => props.theme.secondary};
+  width: 65%;
 `;

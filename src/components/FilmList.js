@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import Film from "./Film";
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import Film from './Film';
 
 class FilmList extends Component {
   constructor(props) {
@@ -14,7 +14,7 @@ class FilmList extends Component {
   async componentDidMount() {
     try {
       // Fetch data from link
-      const res = await fetch("https://swapi.co/api/films/");
+      const res = await fetch('https://swapi.co/api/films/');
       // Assign data
       const films = await res.json();
       // Declare State
@@ -22,7 +22,7 @@ class FilmList extends Component {
         films: films.results
       });
     } catch (e) {
-      console.log("error", e);
+      console.log('error', e);
     }
   }
 
@@ -44,6 +44,7 @@ class FilmList extends Component {
       <h1>Loading...</h1>
     ) : (
       <div>
+        <FilmListHeading>Choose an episode</FilmListHeading>
         <FilmGrid>
           {newFilms.map(film => (
             <Film key={film.id} film={film} />
@@ -55,6 +56,10 @@ class FilmList extends Component {
 }
 
 export default FilmList;
+
+const FilmListHeading = styled.h2`
+  text-align: center;
+`;
 
 const FilmGrid = styled.div`
   display: grid;
