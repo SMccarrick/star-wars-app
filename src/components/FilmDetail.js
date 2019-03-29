@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import FetchCharacter from './FetchCharacter';
 
 class FilmDetail extends Component {
   state = {
