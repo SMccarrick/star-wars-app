@@ -10,6 +10,7 @@ const Film = ({ film }) => {
       <CardStyles>
         <h1>{title}</h1>
         <hr />
+        <CardHr />
         <p>Episode {episode_id}</p>
       </CardStyles>
     </StyledLink>
@@ -56,4 +57,9 @@ const CardStyles = styled.div`
   p {
     font-size: 1.3rem;
   }
+`;
+
+const CardHr = styled.hr`
+  border-width: 2px;
+  width: 8%;
 `;
