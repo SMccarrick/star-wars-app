@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import Film from "./Film";
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import Film from './Film';
 
 class FilmList extends Component {
   constructor(props) {
