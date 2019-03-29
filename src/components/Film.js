@@ -29,8 +29,8 @@ Film.propTypes = {
   film: PropTypes.shape({
     title: PropTypes.string.isRequired,
     release_date: PropTypes.string.isRequired,
-    episode_id: PropTypes.number.isRequired
-  }).isRequired
+    episode_id: PropTypes.number.isRequired,
+  }).isRequired,
 };
 
 const StyledLink = styled(Link)`
