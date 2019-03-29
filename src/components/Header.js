@@ -23,6 +23,10 @@ const HeaderWrapper = styled.div`
       color: ${props => props.theme.primary};
     }
   }
+  a:hover {
+    color: ${props => props.theme.secondary};
+    transition: 0.8s;
+  }
   h1 {
     font-size: 2.5rem;
   }
