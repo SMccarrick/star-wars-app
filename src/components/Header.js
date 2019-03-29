@@ -28,6 +28,8 @@ const HeaderWrapper = styled.div`
     transition: 0.8s;
   }
   h1 {
+    text-align: center;
+    font-weight: 400;
     font-size: 2.5rem;
   }
 `;
