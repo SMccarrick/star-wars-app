@@ -1,19 +1,19 @@
-import React from "react";
+import React from 'react';
 import {
   BrowserRouter as Router, // Browser Router assigned alias
   Route,
-  Switch
-} from "react-router-dom";
-import { ThemeProvider } from "styled-components";
-import FilmList from "./components/FilmList";
-import FilmDetail from "./components/FilmDetail";
-import Header from "./components/Header";
-import "./App.css";
-import theme from "./theme";
+  Switch,
+} from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
+import FilmList from './components/FilmList';
+import FilmDetail from './components/FilmDetail';
+import Header from './components/Header';
+import './App.css';
+import theme from './theme';
 
 /*
 
-  Below I've created a swtich with two routes
+  Below I've created a switch with two routes
 
   - First will always show the film list at :root
   - Second will use the ID from filmDetail to display information dynamically.
