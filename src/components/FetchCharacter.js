@@ -14,5 +14,12 @@ import { Component } from 'react';
 } */
 
 class FetchCharacter extends Component {
+  constructor() {
+    super();
+    this.state = {
+      loading: true,
+      data: null,
+    };
+  }
 
 export default FetchCharacter;
