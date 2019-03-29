@@ -44,6 +44,7 @@ class FilmList extends Component {
       <h1>Loading...</h1>
     ) : (
       <div>
+        <FilmListHeading>Choose an episode</FilmListHeading>
         <FilmGrid>
           {newFilms.map(film => (
             <Film key={film.id} film={film} />
@@ -55,6 +56,10 @@ class FilmList extends Component {
 }
 
 export default FilmList;
+
+const FilmListHeading = styled.h2`
+  text-align: center;
+`;
 
 const FilmGrid = styled.div`
   display: grid;
