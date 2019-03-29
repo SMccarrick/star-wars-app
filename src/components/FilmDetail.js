@@ -35,6 +35,7 @@ class FilmDetail extends Component {
           <h1>{release_date}</h1>
           <h1>{director}</h1>
           <h1>{episode_id}</h1>
+          <h1>Characters</h1>
           {film.characters.map(character => (
             <FetchCharacter url={character}>
               {({ loading, data }) => (loading ? <p>Loading character...</p> : <p>{data.name}</p>)}
