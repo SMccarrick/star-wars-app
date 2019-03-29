@@ -16,7 +16,6 @@ const Header = () => {
 export default Header;
 
 const HeaderWrapper = styled.div`
-  text-align: center;
   a {
     text-decoration: none;
 
