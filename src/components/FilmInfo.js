@@ -34,3 +34,14 @@ const FilmInfo = ({ film }) => {
 };
 
 export default FilmInfo;
+
+FilmInfo.propTypes = {
+  film: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    release_date: PropTypes.string.isRequired,
+    episode_id: PropTypes.number.isRequired,
+    director: PropTypes.string.isRequired,
+    producer: PropTypes.string.isRequired,
+  }).isRequired,
+};
+
