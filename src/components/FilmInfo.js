@@ -45,3 +45,30 @@ FilmInfo.propTypes = {
   }).isRequired,
 };
 
+const Hero = styled.div`
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    text-align: center;
+    font-size: 8vh;
+  }
+`;
+
+const InfoWrapper = styled.div`
+  margin: 25px 75px 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: #bdbdbd;
+  border: 2px solid ${props => props.theme.secondary};
+  border-radius: 25px;
+  h2 {
+    text-align: center;
+    font-weight: 400;
+    padding: 10px;
+  }
+`;
