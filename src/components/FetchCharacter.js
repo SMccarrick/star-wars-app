@@ -38,4 +38,15 @@ class FetchCharacter extends Component {
         throw new Error(err);
       });
   }
+
+  render() {
+    const { children } = this.props;
+    const { loading, data } = this.state;
+    return children({
+      loading,
+      data,
+    });
+  }
+}
+
 export default FetchCharacter;
