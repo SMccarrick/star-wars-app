@@ -22,4 +22,20 @@ class FetchCharacter extends Component {
     };
   }
 
+  componentDidMount() {
+    const { url } = this.props;
+    fetch(url)
+      .then(res => {
+        return res.json();
+      })
+      .then(data => {
+        this.setState({
+          loading: false,
+          data,
+        });
+      })
+      .catch(err => {
+        throw new Error(err);
+      });
+  }
 export default FetchCharacter;
