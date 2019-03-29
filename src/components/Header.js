@@ -9,7 +9,6 @@ const Header = () => {
         <h1>Star Wars</h1>
         <Hr />
       </Link>
-      <h2>Choose a episode below!</h2>
     </HeaderWrapper>
   );
 };
