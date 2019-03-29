@@ -18,10 +18,10 @@ class FilmDetail extends Component {
       const film = await res.json();
 
       this.setState({
-        film
+        film,
       });
     } catch (e) {
-      console.log("error", e);
+      console.log('error', e);
     }
   }
 
