@@ -9,7 +9,7 @@ const Film = ({ film }) => {
     <StyledLink to={`/${id}`}>
       <CardStyles>
         <h1>{title}</h1>
-        <hr />
+        <CardHr />
         <p>Episode {episode_id}</p>
       </CardStyles>
     </StyledLink>
@@ -47,13 +47,28 @@ const CardStyles = styled.div`
   padding: 1rem;
   background: #bdbdbd;
   border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  :hover {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+        transition: 0.5s;
+      }
+  }
   hr {
     color: ${props => props.theme.secondary};
   }
-  h2 {
+  h1 {
+    font-weight: 400;
     font-size: 2rem;
   }
   p {
+    font-weight: 700;
     font-size: 1.3rem;
   }
+`;
+
+const CardHr = styled.hr`
+  border-width: 2px;
+  width: 8%;
 `;
