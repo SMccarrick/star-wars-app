@@ -7,6 +7,7 @@ const Header = () => {
     <HeaderWrapper>
       <Link to="/">
         <h1>Star Wars</h1>
+        <Hr />
       </Link>
       <h2>Choose a episode below!</h2>
     </HeaderWrapper>
@@ -27,4 +28,9 @@ const HeaderWrapper = styled.div`
   h1 {
     font-size: 2.5rem;
   }
+`;
+
+const Hr = styled.hr`
+  color: ${props => props.theme.secondary};
+  width: 65%;
 `;
