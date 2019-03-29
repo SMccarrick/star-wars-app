@@ -48,6 +48,13 @@ const CardStyles = styled.div`
   padding: 1rem;
   background: #bdbdbd;
   border-radius: 25px;
+  :hover {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+        transition: 0.5s;
+      }
+  }
   hr {
     color: ${props => props.theme.secondary};
   }
