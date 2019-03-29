@@ -27,19 +27,13 @@ class FilmDetail extends Component {
 
   render() {
     const { film } = this.state;
-    const { title, release_date, director, episode_id } = film;
-    return !film.title ? (
+    const { title } = film;
+    return !title ? (
       <h1>Loading...</h1>
     ) : (
       <div>
         <FilmInfo film={film} />
         <div>
-          <h1>{title}</h1>
-        </div>
-        <div>
-          <h1>{release_date}</h1>
-          <h1>{director}</h1>
-          <h1>{episode_id}</h1>
           <h1>Characters</h1>
           {film.characters.map(character => (
             <FetchCharacter url={character}>
