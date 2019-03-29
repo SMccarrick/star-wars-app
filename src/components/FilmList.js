@@ -6,7 +6,7 @@ class FilmList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      films: []
+      films: [],
     };
   }
 
@@ -19,7 +19,7 @@ class FilmList extends Component {
       const films = await res.json();
       // Declare State
       this.setState({
-        films: films.results
+        films: films.results,
       });
     } catch (e) {
       console.log('error', e);
@@ -31,9 +31,7 @@ class FilmList extends Component {
     // Create copy of array using Spread Operator
     const newFilms = [...films];
     // Sort data by release_date.
-    newFilms.sort(
-      (a, b) => new Date(a.release_date) - new Date(b.release_date)
-    );
+    newFilms.sort((a, b) => new Date(a.release_date) - new Date(b.release_date));
     // Loop through array & add IDss incrementing by 1 for each film.
     newFilms.map((film, i) => {
       film.id = i + 1;
