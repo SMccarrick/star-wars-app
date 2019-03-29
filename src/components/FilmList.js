@@ -14,7 +14,7 @@ class FilmList extends Component {
   async componentDidMount() {
     try {
       // Fetch data from link
-      const res = await fetch("https://swapi.co/api/films/");
+      const res = await fetch('https://swapi.co/api/films/');
       // Assign data
       const films = await res.json();
       // Declare State
@@ -22,7 +22,7 @@ class FilmList extends Component {
         films: films.results
       });
     } catch (e) {
-      console.log("error", e);
+      console.log('error', e);
     }
   }
 
