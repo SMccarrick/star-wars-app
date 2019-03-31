@@ -28,7 +28,6 @@ export default Film;
 Film.propTypes = {
   film: PropTypes.shape({
     title: PropTypes.string.isRequired,
-    release_date: PropTypes.string.isRequired,
     episode_id: PropTypes.number.isRequired,
   }).isRequired,
 };
@@ -55,9 +54,6 @@ const CardStyles = styled.div`
         transition: 0.5s;
       }
   }
-  hr {
-    color: ${props => props.theme.secondary};
-  }
   h1 {
     font-weight: 400;
     font-size: 2rem;
@@ -69,6 +65,7 @@ const CardStyles = styled.div`
 `;
 
 const CardHr = styled.hr`
+  color: ${props => props.theme.secondary};
   border-width: 2px;
   width: 8%;
 `;
