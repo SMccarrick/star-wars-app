@@ -5,6 +5,7 @@ import Film from './Film';
 class FilmList extends Component {
   constructor(props) {
     super(props);
+    // Initialise State
     this.state = {
       films: [],
     };
@@ -32,9 +33,9 @@ class FilmList extends Component {
     const newFilms = [...films];
     // Sort data by release_date.
     newFilms.sort((a, b) => new Date(a.release_date) - new Date(b.release_date));
-    // Loop through array & add IDss incrementing by 1 for each film.
+    // Loop through array & add IDs incrementing by 1 for each film.
     newFilms.map((film, i) => {
-      film.id = i + 1;
+      film.id = i + 1; // The film id equals to the index + 1
       return film;
     });
     // Creates a loader

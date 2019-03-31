@@ -1,7 +1,17 @@
 import React, { Component } from 'react';
 import FilmInfo from './FilmInfo';
-import FetchCharacter from './FetchCharacter';
+import CharacterList from '../Character/CharacterList';
+/*
 
+  TODO:
+
+  - Split up into smaller components
+  - Fix colour of card HR
+  - Fix keys for characterFetch component
+  - Learn how to re-use styled components & react components
+  - Add Fetch components for other film information use cards to view theme
+
+*/
 class FilmDetail extends Component {
   constructor(props) {
     super(props);
@@ -33,14 +43,7 @@ class FilmDetail extends Component {
     ) : (
       <div>
         <FilmInfo film={film} />
-        <div>
-          <h1>Characters</h1>
-          {film.characters.map(character => (
-            <FetchCharacter url={character}>
-              {({ loading, data }) => (loading ? <p>Loading character...</p> : <p>{data.name}</p>)}
-            </FetchCharacter>
-          ))}
-        </div>
+        <CharacterList film={film} />
       </div>
     );
   }
