@@ -64,6 +64,7 @@ const InfoWrapper = styled.div`
   background: #bdbdbd;
   border: 2px solid ${props => props.theme.secondary};
   border-radius: 25px;
+  box-shadow: ${props => props.theme.shadow};
   h2 {
     text-align: center;
     font-weight: 400;
