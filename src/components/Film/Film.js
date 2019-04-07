@@ -9,11 +9,11 @@ const Film = ({ film }) => {
   const { id, title, episode_id } = film;
   return (
     <StyledLink to={`/${id}`}>
-      <CardStyles>
+      <CardStyled>
         <h1>{title}</h1>
         <CardHr />
         <p>Episode {episode_id}</p>
-      </CardStyles>
+      </CardStyled>
     </StyledLink>
   );
 };
