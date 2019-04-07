@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import FetchCharacter from './FetchCharacter';
+import CardGrid from '../shared/CardGrid';
+import CardHr from '../shared/CardHr';
+import CardStyled from '../shared/CardStyled';
 
 /*
     TODO:
