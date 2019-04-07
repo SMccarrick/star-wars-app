@@ -6,13 +6,12 @@ import CardHr from '../shared/CardHr';
 import CardStyled from '../shared/CardStyled';
 
 const Film = ({ film }) => {
-  const { id, title, episode_id } = film;
+  const { id, title } = film;
   return (
     <StyledLink to={`/${id}`}>
       <CardStyled>
         <h1>{title}</h1>
         <CardHr />
-        <p>Episode {episode_id}</p>
       </CardStyled>
     </StyledLink>
   );
