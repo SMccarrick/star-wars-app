@@ -7,7 +7,6 @@ import CharacterList from '../Character/CharacterList';
   TODO:
 
   - Split up into smaller components
-  - Fix colour of card HR
   - Fix keys for characterFetch component
   - Learn how to re-use styled components & react components
   - Add Fetch components for other film information use cards to view theme
