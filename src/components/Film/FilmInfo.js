@@ -44,14 +44,14 @@ FilmInfo.propTypes = {
 };
 
 const Hero = styled.div`
-  height: 25vh;
+  height: 15vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   h1 {
-    text-align: center;
-    font-size: 8vh;
+    font-size: 5vh;
   }
 `;
 
