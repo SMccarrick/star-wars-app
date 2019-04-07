@@ -20,13 +20,6 @@ const Film = ({ film }) => {
 
 export default Film;
 
-/*
-  PropTypes
-
-  - Set property type of film to be an object
-  - Set property type of title to be a string
-
-*/
 Film.propTypes = {
   film: PropTypes.shape({
     title: PropTypes.string.isRequired,
