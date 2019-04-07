@@ -45,11 +45,11 @@ class FilmList extends Component {
     ) : (
       <div>
         <FilmListHeading>Choose an episode</FilmListHeading>
-        <FilmGrid>
+        <CardGrid>
           {newFilms.map(film => (
             <Film key={film.id} film={film} />
           ))}
-        </FilmGrid>
+        </CardGrid>
       </div>
     );
   }
