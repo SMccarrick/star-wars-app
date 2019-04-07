@@ -56,7 +56,7 @@ const Hero = styled.div`
 `;
 
 const InfoWrapper = styled.div`
-  margin: 25px 75px 1rem;
+  margin: 0 75px 1rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
