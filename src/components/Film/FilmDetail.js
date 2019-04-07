@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 import FilmInfo from './FilmInfo';
 import CharacterList from '../Character/CharacterList';
 /*
@@ -6,7 +7,6 @@ import CharacterList from '../Character/CharacterList';
   TODO:
 
   - Split up into smaller components
-  - Fix colour of card HR
   - Fix keys for characterFetch component
   - Learn how to re-use styled components & react components
   - Add Fetch components for other film information use cards to view theme
@@ -43,6 +43,7 @@ class FilmDetail extends Component {
     ) : (
       <div>
         <FilmInfo film={film} />
+        <SearchBox type="search" placeholder="search characters" />
         <CharacterList film={film} />
       </div>
     );
@@ -50,3 +51,8 @@ class FilmDetail extends Component {
 }
 
 export default FilmDetail;
+
+const SearchBox = styled.input`
+  display: flex;
+  align-items: center;
+`;

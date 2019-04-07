@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Film from './Film';
+import CardGrid from '../shared/CardGrid';
 
 class FilmList extends Component {
   constructor(props) {
@@ -44,11 +45,11 @@ class FilmList extends Component {
     ) : (
       <div>
         <FilmListHeading>Choose an episode</FilmListHeading>
-        <FilmGrid>
+        <CardGrid>
           {newFilms.map(film => (
             <Film key={film.id} film={film} />
           ))}
-        </FilmGrid>
+        </CardGrid>
       </div>
     );
   }
@@ -58,11 +59,4 @@ export default FilmList;
 
 const FilmListHeading = styled.h2`
   text-align: center;
-`;
-
-const FilmGrid = styled.div`
-  display: grid;
-  padding: 1rem;
-  grid-template-columns: repeat(3, 1fr);
-  grid-row-gap: 1rem;
 `;

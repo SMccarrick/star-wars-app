@@ -7,9 +7,7 @@ const FilmInfo = ({ film }) => {
   return (
     <div>
       <Hero>
-        <div>
-          <h1>{title}</h1>
-        </div>
+        <h1>{title}</h1>
       </Hero>
       <InfoWrapper>
         <h2>
@@ -46,26 +44,27 @@ FilmInfo.propTypes = {
 };
 
 const Hero = styled.div`
-  height: 25vh;
+  height: 15vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   h1 {
-    text-align: center;
-    font-size: 8vh;
+    font-size: 5vh;
   }
 `;
 
 const InfoWrapper = styled.div`
-  margin: 25px 75px 1rem;
+  margin: 0 75px 1rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  background: #bdbdbd;
+  background: ${props => props.theme.card_bg};
   border: 2px solid ${props => props.theme.secondary};
   border-radius: 25px;
+  box-shadow: ${props => props.theme.shadow};
   h2 {
     text-align: center;
     font-weight: 400;
