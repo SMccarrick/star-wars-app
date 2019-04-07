@@ -61,7 +61,7 @@ const InfoWrapper = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  background: #bdbdbd;
+  background: ${props => props.theme.card_bg};
   border: 2px solid ${props => props.theme.secondary};
   border-radius: 25px;
   box-shadow: ${props => props.theme.shadow};
