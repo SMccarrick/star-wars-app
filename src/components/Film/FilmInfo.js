@@ -7,9 +7,7 @@ const FilmInfo = ({ film }) => {
   return (
     <div>
       <Hero>
-        <div>
-          <h1>{title}</h1>
-        </div>
+        <h1>{title}</h1>
       </Hero>
       <InfoWrapper>
         <h2>
