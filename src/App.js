@@ -1,7 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import Routes from './components/Routes/Routes';
-import './App.css';
 import theme from './assets/theme';
 
 const App = () => {
