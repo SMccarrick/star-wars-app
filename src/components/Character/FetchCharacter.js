@@ -1,6 +1,6 @@
 import { Component } from 'react';
 
-class FetchCharacter extends Component {
+class FetchData extends Component {
   constructor() {
     super();
     this.state = {
@@ -34,4 +34,4 @@ class FetchCharacter extends Component {
   }
 }
 
-export default FetchCharacter;
+export default FetchData;
