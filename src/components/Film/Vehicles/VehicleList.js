@@ -1,22 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import FetchCharacter from './FetchCharacter';
+import FetchData from '../FetchData';
 import CardGrid from '../shared/CardGrid';
 import CardHr from '../shared/CardHr';
 import CardStyled from '../shared/CardStyled';
 
-/*
-    TODO:
-    - Break down into smaller components (Cards)
-    - Add prop types
-*/
-
-const CharacterList = ({ film }) => {
+const VehicleList = ({ film }) => {
   return (
     <div>
+      <h2>Vehicles</h2>
       <CardGrid>
-        {film.characters.map((character, i) => (
-          <FetchCharacter key={i} url={character}>
+        {film.vehicles.map((vehicle, i) => (
+          <FetchData key={i} url={vehicle}>
             {({ loading, data }) =>
               loading ? (
                 <CardStyled>
@@ -26,21 +21,20 @@ const CharacterList = ({ film }) => {
                 <CardStyled>
                   <p>{data.name}</p>
                   <CardHr />
-                  <p>Character</p>
                 </CardStyled>
               )
             }
-          </FetchCharacter>
+          </FetchData>
         ))}
       </CardGrid>
     </div>
   );
 };
 
-export default CharacterList;
+export default VehicleList;
 
-CharacterList.propTypes = {
+VehicleList.propTypes = {
   film: PropTypes.shape({
-    characters: PropTypes.array.isRequired,
+    vehicles: PropTypes.array.isRequired,
   }).isRequired,
 };

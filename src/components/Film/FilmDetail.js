@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
 import FilmInfo from './FilmInfo';
-import CharacterList from '../Character/CharacterList';
+import CharacterList from './Character/CharacterList';
+import PlanetList from './Planets/PlanetList';
+import VehicleList from './Vehicles/VehicleList';
+import StarshipList from './Starships/StarshipList';
+import SpecieList from './Species/SpecieList';
 /*
 
   TODO:
 
-  - Split up into smaller components
-  - Fix keys for characterFetch component
-  - Learn how to re-use styled components & react components
-  - Add Fetch components for other film information use cards to view theme
+  - Fix keys for data List components
 
 */
 class FilmDetail extends Component {
@@ -43,16 +43,14 @@ class FilmDetail extends Component {
     ) : (
       <div>
         <FilmInfo film={film} />
-        <SearchBox type="search" placeholder="search characters" />
         <CharacterList film={film} />
+        <PlanetList film={film} />
+        <StarshipList film={film} />
+        <VehicleList film={film} />
+        <SpecieList film={film} />
       </div>
     );
   }
 }
 
 export default FilmDetail;
-
-const SearchBox = styled.input`
-  display: flex;
-  align-items: center;
-`;
