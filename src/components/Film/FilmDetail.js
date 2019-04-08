@@ -43,7 +43,6 @@ class FilmDetail extends Component {
     ) : (
       <div>
         <FilmInfo film={film} />
-        <SearchBox type="search" placeholder="search characters" />
         <CharacterList film={film} />
       </div>
     );
@@ -51,8 +50,3 @@ class FilmDetail extends Component {
 }
 
 export default FilmDetail;
-
-const SearchBox = styled.input`
-  display: flex;
-  align-items: center;
-`;
