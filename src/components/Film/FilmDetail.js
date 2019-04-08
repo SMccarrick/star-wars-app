@@ -44,6 +44,10 @@ class FilmDetail extends Component {
       <div>
         <FilmInfo film={film} />
         <CharacterList film={film} />
+        <PlanetList film={film} />
+        <StarshipList film={film} />
+        <VehicleList film={film} />
+        <SpecieList film={film} />
       </div>
     );
   }
