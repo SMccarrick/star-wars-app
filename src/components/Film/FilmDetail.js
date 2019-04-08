@@ -9,10 +9,7 @@ import SpecieList from './Species/SpecieList';
 
   TODO:
 
-  - Split up into smaller components
-  - Fix keys for characterFetch component
-  - Learn how to re-use styled components & react components
-  - Add Fetch components for other film information use cards to view theme
+  - Fix keys for data List components
 
 */
 class FilmDetail extends Component {
