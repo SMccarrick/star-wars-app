@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
 import FilmInfo from './FilmInfo';
-import CharacterList from '../Character/CharacterList';
+import CharacterList from './Character/CharacterList';
+import PlanetList from './Planets/PlanetList';
+import VehicleList from './Vehicles/VehicleList';
+import StarshipList from './Starships/StarshipList';
+import SpecieList from './Species/SpecieList';
 /*
 
   TODO:
