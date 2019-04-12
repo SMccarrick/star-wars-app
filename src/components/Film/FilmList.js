@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Film from './Film';
-import CardGrid from '../shared/CardGrid';
+import CardGrid from './shared/CardGrid';
 
 class FilmList extends Component {
   constructor(props) {

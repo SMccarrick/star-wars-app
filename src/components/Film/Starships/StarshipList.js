@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import FetchData from '../FetchData';
 import CardGrid from '../shared/CardGrid';
 import CardHr from '../shared/CardHr';
-import CardStyled from '../shared/CardStyled';
+import Card from '../shared/Card';
 
 const StarshipList = ({ film }) => {
   return (
@@ -14,14 +14,14 @@ const StarshipList = ({ film }) => {
           <FetchData key={i} url={starship}>
             {({ loading, data }) =>
               loading ? (
-                <CardStyled>
+                <Card>
                   <p>Loading character...</p>
-                </CardStyled>
+                </Card>
               ) : (
-                <CardStyled>
+                <Card>
                   <p>{data.name}</p>
                   <CardHr />
-                </CardStyled>
+                </Card>
               )
             }
           </FetchData>

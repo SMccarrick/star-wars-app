@@ -1,13 +1,11 @@
 import styled from 'styled-components';
 
-const CardStyled = styled.div`
+const Card = styled.div`
   text-align: center;
-  margin: 0.8rem;
-  padding: 0.8rem;
   background: ${props => props.theme.card_bg};
   border-radius: 25px;
   border: 1px solid ${props => props.theme.secondary};
-  box-shadow: ${props => props.theme.shadow};
+  box-shadow: ${props => props.theme.shadows};
   :hover {
         -webkit-transform: ${props => props.theme.transform};
         -ms-transform: ${props => props.theme.transform};
@@ -25,4 +23,4 @@ const CardStyled = styled.div`
   }
 `;
 
-export default CardStyled;
+export default Card;
