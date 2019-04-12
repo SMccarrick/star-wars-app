@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const Card = styled.div`
   text-align: center;
+  margin: 1rem;
   background: ${props => props.theme.card_bg};
   border-radius: 25px;
   border: 1px solid ${props => props.theme.secondary};
