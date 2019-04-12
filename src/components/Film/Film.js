@@ -2,17 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import CardHr from '../shared/CardHr';
-import CardStyled from '../shared/CardStyled';
+import CardHr from './shared/CardHr';
+import Card from './shared/Card';
 
 const Film = ({ film }) => {
   const { id, title } = film;
   return (
     <StyledLink to={`/${id}`}>
-      <CardStyled>
+      <Card>
         <h1>{title}</h1>
         <CardHr />
-      </CardStyled>
+      </Card>
     </StyledLink>
   );
 };
