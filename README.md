@@ -2,12 +2,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## A React App Created Using The Star Wars API
 
-In this app I will be creating a React App using an api. 
+This React project uses an API to show information about the Star Wars films. 
 
 ## API Link
 
 https://swapi.co/
 
-## Dev run
+## To Run the project
 
-Use npm start to run app.
+- Clone repo
+
+- npm start to start a dev build.
