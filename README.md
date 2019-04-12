@@ -12,4 +12,4 @@ https://swapi.co/
 
 - Clone repo
 
-- npm start to start a dev build.
+- npm start to begin a dev build.
